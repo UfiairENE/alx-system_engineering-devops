@@ -1,0 +1,54 @@
+https://miro.com/app/board/uXjVPcGkdhs=/?share_link_id=36280719144
+
+## Answers:
+	1. Server is a computer, that has it's own, hard disk, CPU, RAM. What
+        separates server from your computer is that server gives service to
+        other computers, whether it is to store files, to use email or to connect
+        to web  sites. A server can be of one kind providing one service or it
+        can provide all the services mentioned above.
+
+        2. Domain name is a text based name of a webpage and used it is used
+        by DNS to match it to its respective IP address.A domain name is your website name. A domain name is the address where Internet users can access your website. A domain name is used for finding and identifying computers on the Internet. Computers use IP addresses, which are a
+        series of number. However, it is difficult for humans to remember strings of
+        numbers. Because of this, domain names were developed and used to identify entities on the Internet rather than using IP addresses.
+
+        3. www.foobar.com, The domain name here is foobar.com that comes after
+        the dot and the first part, www, is a subdomain. www is used as a CNAME
+        record whose value is foobar.com, which is then used by DNS to find it's
+        IP address.
+
+        4. Web server in its hardware form stores the html, java, css, image,
+        it also stores web server software. The web server software controls
+        how websites are accessed. This is done with the help of HTTP server,
+        that understand URL and HTTP requests, to deliver us a static webpage.Web server respond to the client request in either of the following two ways:
+        1.Sending the file to the client associated with the requested URL.
+        2.Generating response by invoking a script and communicating with database
+
+
+        5. An Application server is a server program that resides in the server (computer) and
+        provides the business logic for the application programme. The server can be a part of the
+        network, more precisely the part of the distributed network. The server program is a
+        program that provides its services to the client program that resides either in the same
+        computer or on another computer connected through the network.Application servers connect database information (usually coming from a database server) and the end-user or client program (often running in a Web browser).
+
+
+        5. Database is a way to store information in an organized manner so
+        that it can be easily accessed, updated and utilized.
+
+
+        6. The server uses IP address to communicate with the client using
+        protocols like TCP\IP, HTTP.
+
+## Issues with the infrastructure:
+        1. It has SPOF. 
+        This can be with the client software or hardware, the network
+        connection or with a single server. It is a single server, malfunction in its
+        hardware or software or even issues in the data center can fail the entire system.
+
+        2. Downtime when it is updating requires for the whole system to be
+        shutdown, at this time users will not be able to access the services
+        because there is no other server that can take its place.
+
+        3. It is using a single server that can be overloaded with incoming
+        bulky traffic. This can cause server crashing. There is no scalability
+        because we don't have another server.

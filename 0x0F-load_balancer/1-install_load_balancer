@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Configures a new Ubuntu server with a HAproxy load-balancer
+apt-get -y install software-properties-common
+add-apt-repository -y ppa:vbernat/haproxy-2.4
+apt-get -y update
+sudo apt install haproxy=2.4.\*
+haproxy -v
+sudo sed -i '/errorfile 504/a listen ireneufia' /etc/haproxy/haproxy.cfg
+sudo sed -i '/listen ireneufia/a         bind :80' /etc/haproxy/haproxy.cfg
+sudo sed -i '/bind :80/a         mode http' /etc/haproxy/haproxy.cfg
+sudo sed -i '/mode http/a         server 10313-web-01 3.236.122.107:80 check' /etc/haproxy/haproxy.cfg
+sudo sed -i '/server 10313-web-01 3.236.122.107:80 check/a         server 10313-web-02 3.234.236.80:80 check' /etc/haproxy/haproxy.cfg
+sudo sed -i '/#EXTRAOPTS="-de -m 16"/a ENABLED=1' /etc/default/haproxy
+sudo systemctl restart haproxy.service 
